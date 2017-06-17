@@ -51,6 +51,12 @@ aside, nav, article, figure {
 	vertical-align:middle
  }
 
+ #sunshine-image {
+	display:inline-block;
+	width:240px;
+	vertical-align:middle
+ }
+
  #welcome-message {
 	background: #eee;
 	width:300px;

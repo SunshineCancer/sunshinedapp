@@ -17,7 +17,7 @@
 
 <body>
 <h1>Sunshine Dapp</h1>
-<img src="images/sunshinelogo.jpg">
+<img id="sunshine-image" src="images/sunshinelogo.jpg">
 Self Monitoring of Skin Health
 
 
@@ -25,23 +25,15 @@ Self Monitoring of Skin Health
 
 
 </div>
-
-<div id="chart">
-<!--<a href="" id="build-chart">build chart</a>-->S
-chart
-	<div id="dmap-live-list">
-		<a id="sensor-update-23andme" href="" data-scvisual="0xcd07eae8b4ac344f00046a3d1ed9751a76faa1b3">Build compare chart</a>
+<a href="" id="startcamera">Start Camera</a>
+<div class="camera">
+	<video id="video">Video stream not available.</video>
+	<button id="photobutton">Take photo</button>
 	</div>
-</div>
-
-<section id="dmaps-view" >
-	<div id="canvas-skin1-chart"></div>
-	<div id="canvas-skin2-chart2"></div>
-</section>
-
-<div id="data-table">
-data table
-<a href="" id="data-table">Produce data table summary</a>
+	<canvas id="canvas">
+	</canvas>
+	<div class="output">
+	<img id="photo" alt="The screen capture will appear in this box.">
 </div>
 
 </body>
