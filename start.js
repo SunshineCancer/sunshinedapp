@@ -5,9 +5,9 @@
 $(document).ready(function(){
 
 	liveSettings = {};
-	liveSettings.cloudIP = "http://localhost:7824";
-	liveSettings.localIP = "http://localhost:7824";
-	liveSettings.localURL = "http://localhost/aboynejames/test/dsensor/dapp/genecompare/resolutionwallet/src/index.html";
+	liveSettings.cloudIP = "http://localhost:7817";
+	liveSettings.localIP = "http://localhost:7817";
+	liveSettings.localURL = "http://localhost/aboynejames/test/dsensor/dapp/sunshinedapp/src/index.html";
 	// connect to socket.io
 	var socketpi = io.connect(liveSettings.localIP);
 	var liveChart = new chartDisplay();
@@ -172,5 +172,16 @@ console.log(idclick);
 			}
 		});
 
+		var skinCtime = [3,4,5,6,8,9];
+		var x = d3.scale.linear()
+    .domain([0, d3.max(skinCtime)])
+    .range([0, 420]);
+		
+		d3.select(".skincancersurvivial")
+		  .selectAll("div")
+		    .data(skinCtime)
+		  .enter().append("div")
+		    .style("width", function(d) { return x(d) + "px"; })
+		    .text(function(d) { return d; });
 
 });
